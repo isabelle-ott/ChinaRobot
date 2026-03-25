@@ -1,0 +1,27 @@
+{
+    "files.associations": {
+        "*.h": "c",
+        "bsp.h": "c",
+        "motor_basic.h": "c",
+        "ostream": "c",
+        "format": "c",
+        "cstdint": "c",
+        "random": "c",
+        "compare": "c",
+        "variant": "c",
+        "limits": "c",
+        "string": "c",
+        "vector": "c",
+        "bit": "c",
+        "functional": "c",
+        "string_view": "c",
+        "numeric": "c"
+    },
+    "C_Cpp.clang_format_style": "file:${workspaceFolder}/.vscode/.clang-format",
+    "git.enabled": true,
+    "C_Cpp.errorSquiggles": "enabled",
+    "[c]": {
+        "files.encoding": "gb2312",
+        "files.autoGuessEncoding": true
+    }
+}
