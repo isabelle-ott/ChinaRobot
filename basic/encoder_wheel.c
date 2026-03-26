@@ -3,7 +3,7 @@
 #include "tim.h" // 包含 htim2 的定义
 
 static int16_t last_counter = 0;
-static int32_t total_pulses = 0; // 用 32 位整数无限累加脉冲，防止长距离溢出
+volatile int32_t total_pulses = 0; // 用 32 位整数无限累加脉冲，防止长距离溢出
 
 /**
  * @brief 初始化并启动编码器定时器
