@@ -15,7 +15,7 @@ set(CMAKE_C_EXTENSIONS ON)
 
 # Define the build type
 if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE "MinSizeRel")
+    set(CMAKE_BUILD_TYPE "Debug")
 endif()
 
 # Set the project name
@@ -26,13 +26,26 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
 # Core project settings
 project(${CMAKE_PROJECT_NAME})
+
+# 在 project(...) 之后添加
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    # -Og 是专门为调试设计的优化，既能缩减体积，又不影响单步调试
+    # -g 是生成调试信息
+    add_compile_options(-Og -g)
+    message("Applying Debug optimization: -Og")
+endif()
+
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
 # Enable CMake support for ASM and C languages
 enable_language(C ASM)
 
 # Create an executable object type
-add_executable(${CMAKE_PROJECT_NAME})
+add_executable(${CMAKE_PROJECT_NAME}
+        basic/encoder_wheel.c
+        basic/encoder_wheel.h
+        lib/encoder_math.c
+        lib/encoder_math.h)
 
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)

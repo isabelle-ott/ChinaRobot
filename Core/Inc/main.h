@@ -116,6 +116,8 @@ void Error_Handler(void);
 #define Button2_GPIO_Port GPIOD
 #define Button3_Pin GPIO_PIN_12
 #define Button3_GPIO_Port GPIOD
+#define EncoderWheel_A_Pin GPIO_PIN_15
+#define EncoderWheel_A_GPIO_Port GPIOA
 #define LEDR_Pin GPIO_PIN_11
 #define LEDR_GPIO_Port GPIOC
 #define LEDG_Pin GPIO_PIN_0
@@ -132,6 +134,8 @@ void Error_Handler(void);
 #define gpio_HW_4_GPIO_Port GPIOD
 #define gpio_HW_5_Pin GPIO_PIN_7
 #define gpio_HW_5_GPIO_Port GPIOD
+#define EncoderWheel_B_Pin GPIO_PIN_3
+#define EncoderWheel_B_GPIO_Port GPIOB
 #define beebee_Pin GPIO_PIN_9
 #define beebee_GPIO_Port GPIOB
 
